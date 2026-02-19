@@ -45,7 +45,7 @@ public class CompuServicesSoftApplication {
                 @Override
                 public void addCorsMappings(CorsRegistry registry) {
                     registry.addMapping("/**")
-                            .allowedOrigins("https://compuservicessoft.com") // Permitir solo tu dominio en producción
+                            .allowedOrigins("https://compuservicessoft.com", "https://css-fronted-production.up.railway.app") // Permitir solo tu dominio en producción
                             .allowedMethods("HEAD", "GET", "PUT", "POST", "DELETE", "PATCH")
                             .allowedHeaders("*")
                             .allowCredentials(true);
