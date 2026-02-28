@@ -19,9 +19,7 @@ public class Producto {
     @JoinColumn(name = "categoria_id")
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private Categoria categoria;
-    private float total;
     private String imagen;
     @Column(length = 6000)
     private String descripcion;
-    private String estado;
 }

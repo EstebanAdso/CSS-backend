@@ -62,8 +62,8 @@ src/main/java/com/example/compuservicessoft/
 │
 └── entities/
     ├── Categoria.java             # Entidad: id, nombre, descripcion, descripcionGarantia
-    └── Producto.java              # Entidad: id, nombre, cantidad, precioVendido, total,
-                                   #          imagen, descripcion, estado, categoria (FK)
+    └── Producto.java              # Entidad: id, nombre, cantidad, precioVendido,
+                                   #          imagen, descripcion, categoria (FK)
 ```
 
 ### Relación entre entidades
@@ -74,10 +74,8 @@ Categoria (1) ──────< Producto (N)
   - nombre              - nombre
   - descripcion         - cantidad
   - descripcionGarantia - precioVendido
-                        - total
                         - imagen
                         - descripcion
-                        - estado
                         - categoria_id (FK)
 ```
 
@@ -138,7 +136,6 @@ GET /api/products?page=0&size=12&sort=nombre,asc
       "total": 459.90,
       "imagen": "ssd-patriot.jpg",
       "descripcion": "SSD de alto rendimiento...",
-      "estado": "disponible",
       "categoria": {
         "id": 3,
         "nombre": "Almacenamiento",
@@ -183,7 +180,6 @@ GET /api/products/1
   "total": 459.90,
   "imagen": "ssd-patriot.jpg",
   "descripcion": "SSD de alto rendimiento...",
-  "estado": "disponible",
   "categoria": {
     "id": 3,
     "nombre": "Almacenamiento"
